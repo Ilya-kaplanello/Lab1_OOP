@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relative_generator</title>
+</head>
+<body>
+    <form action ='' method = 'POST'>
+        {% csrf_token %}
+        <label>size:</label><input type = 'number' placeholder = 'input size' name = 'size' /><br><br>
+        <input type="Submit" name="Submit" value="Submit"/>
+    </form>
+
+{% if submitbutton == "Submit" %}
+    <p>[0;0.1]      {{ f0 }}</p>
+    <p>[0.1;0.2]    {{ f1 }}</p>
+    <p>[0.2;0.3]    {{ f2 }}</p>
+    <p>[0.3;0.4]    {{ f3 }}</p>
+    <p>[0.4;0.5]    {{ f4 }}</p>
+    <p>[0.5;0.6]    {{ f5 }}</p>
+    <p>[0.6;0.7]    {{ f6 }}</p>
+    <p>[0.7;0.8]    {{ f7 }}</p>
+    <p>[0.8;0.9]    {{ f8 }}</p>
+    <p>[0.9;1]      {{ f9 }}</p>
+    <p>Your iterlist is {{ iterlist }}</p>
+{% endif %}
+
+</body>
+</html>

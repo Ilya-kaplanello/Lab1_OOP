@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logarithm_generator</title>
+</head>
+<body>
+    <form action ='' method = 'POST'>
+        {% csrf_token %}
+        <label>nu:</label><input type="number" step="0.01" placeholder = 'input nu' name = 'nu'/><br><br>
+        <label>size:</label><input type = 'number' placeholder = 'input size' name = 'size' /><br><br>
+        <input type="Submit" name="Submit" value="Submit"/>
+    </form>
+
+{% if submitbutton == "Submit" %}
+    <p>[0;0.5]      {{ f0 }}</p>
+    <p>[0.5;1]    {{ f1 }}</p>
+    <p>[1;2]    {{ f2 }}</p>
+    <p>[2;3]    {{ f3 }}</p>
+    <p>[3;5]    {{ f4 }}</p>
+
+    <p>Your iterlist is {{ iterlist }}</p>
+{% endif %}
+
+</body>
+</html>
